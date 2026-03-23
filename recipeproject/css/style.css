@@ -1,0 +1,329 @@
+:root {
+    --primary:       #c0392b;   /* main accent — red */
+    --primary-light: #fadbd8;   /* light red for backgrounds */
+    --text-dark:     #2c2c2c;   /* headings */
+    --text-body:     #555555;   /* body text */
+    --text-muted:    #999999;   /* labels, small text */
+    --bg-page:       #fdfaf7;   /* warm off-white page background */
+    --bg-card:       #ffffff;   /* white cards */
+    --bg-tip:        #fef9ec;   /* warm yellow tip box */
+    --border:        #ece8e1;   /* subtle borders */
+    --radius:        8px;       /* consistent corner rounding */
+    --shadow:        0 2px 12px rgba(0,0,0,0.07);
+}
+
+/*Global*/
+*{
+    box-sizing: border-box;
+}
+
+body{
+    margin: 0;
+    padding: 0;
+    color: var(--text-body);
+    background: var(--bg-page);
+}
+
+.container{
+    width: 80%;
+    margin: 0 auto;
+}
+
+a{
+    text-decoration: none;
+    text-transform: uppercase;
+    color: var(--text-muted);
+}
+
+ul{
+    list-style: none;
+}
+
+/*Header Section*/
+header{
+    background: var(--bg-card);
+    text-align: center;
+    padding: 10px 0 5px;
+    border: var(--border) solid 1px;
+    position: fixed;
+    z-index: 100;
+    left: 0;
+    right: 0;
+    top: 0;
+    box-shadow: var(--shadow);
+}
+
+header ul{
+    display: flex;
+    justify-content: center;
+}
+
+header ul li{
+    padding-inline: 20px;
+}
+
+header h2{
+    color: var(--primary);
+    font-size: 1.45rem;
+    letter-spacing: 0.04em;
+    margin: 0;
+    cursor: context-menu;
+}
+
+header a{
+    transition: color 250ms ease;
+}
+
+header a:hover{
+    color: var(--primary);
+}
+
+/*Hero Section*/
+.hero{
+    padding-top: 100px;
+    background: var(--bg-card);
+    border-bottom: 1px solid var(--border);
+    margin-bottom: 60px;
+}
+
+
+.hero .container{
+    padding-top: 40px;
+    padding-bottom: 40px;
+    justify-items: center;
+    text-align: center;
+    width: 100%;
+}
+
+.hero span{
+    display: block;
+    color: var(--primary);
+    font-size: 0.9rem;
+    letter-spacing: 0.08em;
+}
+
+.hero .container > h1{
+    font-size: 2.2rem;
+    letter-spacing: 0.05em;
+    color: var(--text-dark);
+}
+
+.hero .container p{
+    padding-inline: 40px;
+    text-align: center;
+    font-size: 1.03rem;
+    letter-spacing: 0.04em;
+    line-height: 1.8em;
+    color: var(--text-muted);
+}
+
+.hero__wrapper{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1rem;
+    padding-inline: 35px;
+}
+
+.hero__wrapper h3 h2{
+   margin: 0;
+   padding: 0;
+   padding: 5px 3px ;
+}
+
+.hero__wrapper h2{
+    font-size: 01rem;
+    letter-spacing: 0.08em;
+}
+
+.hero__wrapper h3{
+    text-transform: uppercase;
+    color: var(--text-muted);
+    font-size: 0.8rem;
+    letter-spacing: 0.08em;
+}
+
+.hero__wrapper .hero__box{
+    min-width: 110px;
+    border: 1px solid var(--border);
+    background: var(--bg-page);
+    border-top: 3px solid var(--primary);
+    display: flex;
+    flex-direction: column;
+    gap: 0.6rem;    
+    align-items: center;
+    padding: 16px 24px;
+    transition: transform 250ms ease;
+    cursor: context-menu;
+}
+
+.hero__box:hover{
+    transform: translateY(-8px);
+}
+
+/*Ingredients Section*/
+.ingred .container{
+    background: var(--bg-card);
+    border-radius: var(--radius);
+    border: 1px solid var(--border);
+    padding-inline: 30px;
+    padding-top: 15px;
+    width: 90%;
+    cursor: context-menu;
+    margin-bottom: 80px;
+    box-shadow: var(--shadow);
+}
+
+.ingred .container > h2{
+    text-transform: uppercase;
+    border-left: 3px solid var(--primary);
+    padding-left: 15px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    font-size: 1.1rem;
+    letter-spacing: 0.09em;
+    margin-bottom: 30px;
+}
+
+.ingred__box{
+    margin-bottom: 30px;
+}
+
+.ingred__box p:not(:last-child) {
+    border-bottom: 1px solid var(--border);
+}
+
+.ingred__wrapper p{
+    padding-bottom: 10px;
+    margin-top: 0;
+    padding-top: 0;
+
+    transition: transform 200ms ease, color 200ms ease;
+}
+
+.ingred__wrapper p:hover{
+    color: var(--primary);
+    transform: translateX(8px);
+}
+
+.ingred__wrapper h3{
+    color: var(--primary);
+    letter-spacing: 0.08em;
+    font-size: 0.95rem;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+}
+
+
+/*Instruction Section*/
+.instruction .container{
+    width: 90%;
+    cursor: context-menu;
+    margin-bottom: 60px;
+}
+
+.instruction__box{
+    border-radius: var(--radius);
+    border: 1px solid var(--border);
+    background: var(--bg-card);
+    margin-bottom: 20px;
+    padding: 10px 20px;
+    position: relative;
+    box-shadow: var(--shadow);
+
+    transition: transform 250ms ease, border 250ms ease;
+}
+
+.instruction .container > h2{
+    color: var(--text-dark);
+    border-left: 3px solid var(--primary);
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    font-size: 1.2rem;
+    padding-left: 15px;
+    padding-bottom: 5px;
+    padding-top: 5px;
+    margin-bottom: 30px;
+}
+
+.instruction__box:not(:last-of-type):hover{
+    border: 1px solid var(--primary);
+    transform: translateY(-3px);
+}
+
+.card{
+    font-size: 1.2rem;
+    font-weight: bolder;
+    color: var(--bg-tip);
+    background: var(--primary);
+    border-radius: 50%;
+    padding: 2px 8px;
+    position: absolute;
+    top: -10px;
+    left: 20px;
+}
+
+.instruction__box p{
+    line-height: 1.6em;
+    letter-spacing: 0.05em;
+}
+
+.instruction__box h2{
+    text-transform: uppercase;
+    font-size: 1.2rem;
+    color: var(--text-dark);
+    letter-spacing: 0.04em;
+}
+
+.chef__tip{
+    background: var(--bg-tip);
+    color: rgb(119, 119, 34);
+    border-radius: var(--radius);
+    border-left: 4px solid orange;
+    box-shadow: var(--shadow);
+}
+
+.chef__tip h2{
+    color: rgb(119, 119, 34);
+}
+
+/*Footer*/
+footer{
+    text-align: center;
+    background: var(--bg-card);
+    color: var(--text-muted);
+    border-top: 1px solid var(--border);
+    font-size: 0.95rem;
+    letter-spacing: 0.08em;
+    padding: 30px 0;
+}
+
+
+@media(min-width: 768px){
+    .grid__wrapper{
+        display: grid;
+        grid-template-columns: 30% 70%;
+        width: 90%;
+        margin: 0 auto;
+    }
+
+    .ingred .container{
+        position: sticky;
+        top: 70px;
+    }
+    
+    .hero .container > h1{
+        font-size: 3rem;
+    }
+
+    .hero .container p{
+        max-width: 620px;
+    } 
+    
+    header{
+       display: flex;
+       align-items: center;
+       justify-content: space-between;
+       padding-inline: 80px;
+    }
+}
